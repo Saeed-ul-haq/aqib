@@ -25,7 +25,8 @@ export default function Register() {
           onFinish={onFinish}
         >
             <Form.Item
-            name="Email"
+            name="email"
+            label='Email'
             rules={[
               {
                 required: true,
@@ -33,7 +34,6 @@ export default function Register() {
               },
             ]}
           >
-              <label>Email</label>
             <Input
             suffix={<MailFilled  className="site-form-item-icon" />}
               placeholder="Email"
@@ -41,6 +41,7 @@ export default function Register() {
           </Form.Item>
           <Form.Item
             name="username"
+            label='username'
             rules={[
               {
                 required: true,
@@ -48,7 +49,6 @@ export default function Register() {
               },
             ]}
           >
-              <label>Username</label>
             <Input
             suffix={<UserOutlined className="site-form-item-icon" />}
               placeholder="Username"
@@ -56,6 +56,7 @@ export default function Register() {
           </Form.Item>
           <Form.Item
             name="password"
+            label="password"
             rules={[
               {
                 required: true,
@@ -63,7 +64,6 @@ export default function Register() {
               },
             ]}
           >
-              <label>Password</label>
             <Input
             suffix={<LockOutlined className="site-form-item-icon" />}
               type="password"
