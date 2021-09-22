@@ -172,3 +172,31 @@ p.invite {
 .mr-30 {
   margin-right: 30px;
 }
+
+.p-2.d-flex.align-items-center {
+  width: 100%;
+background-color: cadetblue;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  bottom: 0px;
+}
+.p-2.d-flex.align-items-center button {
+  display: block;
+  margin: 10px auto;
+}
+
+.ant-form-item {padding: 0;
+color: rgba(0, 0, 0, 0.65);
+font-size: 14px;
+font-variant: tabular-nums;
+line-height: 1.5715;
+list-style: none;
+-webkit-font-feature-settings: 'tnum';
+font-feature-settings: 'tnum', "tnum";
+margin-bottom: 24px;
+vertical-align: top;
+display: flex !important;
+flex-direction: column !important;
+align-items: flex-start !important;
+}

@@ -17,12 +17,15 @@ export default function Login() {
         <Form
           name="normal_login"
           className="login-form"
+          
           initialValues={{
             remember: true,
           }}
           onFinish={onFinish}
+          autoComplete="off"
         >
           <Form.Item
+            label="Username"
             name="username"
             rules={[
               {
@@ -31,7 +34,7 @@ export default function Login() {
               },
             ]}
           >
-            <label>Username</label>
+            {/* <label>Username</label> */}
             <Input
               suffix={<UserOutlined className="site-form-item-icon" />}
               placeholder="Username"
@@ -39,14 +42,17 @@ export default function Login() {
           </Form.Item>
           <Form.Item
             name="password"
+            label='Password'
             rules={[
+
+
               {
                 required: true,
                 message: "Please input your Password!",
               },
             ]}
           >
-            <label>Password</label>
+            {/* <label>Password</label> */}
             <Input
               suffix={<LockOutlined className="site-form-item-icon" />}
               type="password"

@@ -1,19 +1,19 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import logo from "../../assets/logo.jpg";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { DatePicker, Space, Input } from "antd";
 import { Select, Table } from "antd";
-import { AudioOutlined,MoreOutlined } from "@ant-design/icons";
-import { Drawer,Button } from 'antd';
-import { RadioChangeEvent } from 'antd/es/radio';
+import { AudioOutlined, MoreOutlined } from "@ant-design/icons";
+import { Drawer, Button } from "antd";
+import { RadioChangeEvent } from "antd/es/radio";
 
 const { Option } = Select;
 export default function Dashboard() {
-    const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(false);
   const showDrawer = () => {
     setVisible(true);
   };
-  
+
   const onClose = () => {
     setVisible(false);
   };
@@ -34,10 +34,16 @@ export default function Dashboard() {
 
   const columns = [
     {
-        title: "",
-        dataIndex: "tokenno",
-        render: () => <img src='https://www.shifa.com.pk/wp-content/uploads/2020/10/Munir-Zafar-150x150.png' alt="" style={{width: '20px',borderRadius: '10px'}}/>
-      },
+      title: "",
+      dataIndex: "tokenno",
+      render: () => (
+        <img
+          src="https://www.shifa.com.pk/wp-content/uploads/2020/10/Munir-Zafar-150x150.png"
+          alt=""
+          style={{ width: "20px", borderRadius: "10px" }}
+        />
+      ),
+    },
     {
       title: "Token NO",
       dataIndex: "tokenno",
@@ -60,8 +66,7 @@ export default function Dashboard() {
 
       onFilter: (value, record) => record.name.indexOf(value) === 0,
       sorter: (a, b) => a.name.length - b.name.length,
-           defaultSortOrder: 'descend',
-
+      defaultSortOrder: "descend",
     },
     {
       title: "Arrival time",
@@ -69,8 +74,7 @@ export default function Dashboard() {
       key: "arrival time",
       onFilter: (value, record) => record.name.indexOf(value) === 0,
       sorter: (a, b) => a.name.length - b.name.length,
-           defaultSortOrder: 'descend',
-
+      defaultSortOrder: "descend",
     },
     {
       title: "Assess time",
@@ -78,8 +82,7 @@ export default function Dashboard() {
       key: "assess time",
       onFilter: (value, record) => record.name.indexOf(value) === 0,
       sorter: (a, b) => a.name.length - b.name.length,
-           defaultSortOrder: 'descend',
-
+      defaultSortOrder: "descend",
     },
     {
       title: "Seen time",
@@ -87,8 +90,7 @@ export default function Dashboard() {
       key: "seen time",
       onFilter: (value, record) => record.name.indexOf(value) === 0,
       sorter: (a, b) => a.name.length - b.name.length,
-           defaultSortOrder: 'descend',
-
+      defaultSortOrder: "descend",
     },
     {
       title: "Amount",
@@ -96,18 +98,22 @@ export default function Dashboard() {
       key: "amount",
       onFilter: (value, record) => record.name.indexOf(value) === 0,
       sorter: (a, b) => a.name.length - b.name.length,
-      defaultSortOrder: 'descend',
+      defaultSortOrder: "descend",
     },
     {
       title: "Status",
       dataIndex: "status",
       key: "status",
-      render: (text) => <p className="invite">{text} </p>
+      render: (text) => <p className="invite">{text} </p>,
     },
     {
       title: "",
       dataIndex: "view",
-      render: (text) => <p className="invite" onClick={showDrawer}>View </p>,
+      render: (text) => (
+        <p className="invite" onClick={showDrawer}>
+          View{" "}
+        </p>
+      ),
     },
     {
       title: "",
@@ -126,9 +132,9 @@ export default function Dashboard() {
   );
   return (
     <div className="dashbaord">
-          <Drawer
+      <Drawer
         title="Profile"
-        placement={'right'}
+        placement={"right"}
         width={500}
         visible={visible}
         extra={
@@ -140,23 +146,56 @@ export default function Dashboard() {
           </Space>
         }
       >
-        <div className='d-flex '>
-            <div className='mr-30'>
-               <div className="drawer-photo">
-               <UserOutlined />
-               </div>
+        <div className="d-flex ">
+          <div className="mr-30">
+            <div className="drawer-photo">
+              <UserOutlined />
             </div>
-            <div className='user-info'>
-                <p><b >Ijaz khan</b></p>
-                <p>MR No: <b>203403</b></p>
-                <p>Age: <b>34</b></p>
-            </div>
-            <div className="userplace">
-                <p></p>
-            </div>
+          </div>
+          <div className="user-info">
+            <p>
+              <b>Ijaz khan</b>
+            </p>
+            <p>
+              MR No: <b>203403</b>
+            </p>
+            <p>
+              Age: <b>34</b>
+            </p>
+          </div>
         </div>
-        <div className='p-2 d-flex align-items-center'>
-        <Button onClick={onClose}>Cancel</Button>
+        <div className="userplace">
+          <p>
+            Registraion Date{" "}
+            <span style={{ textAlign: "right", float: "right" }}>23-4-22</span>
+          </p>
+          <p>
+            Date of Birth{" "}
+            <span style={{ textAlign: "right", float: "right" }}>23-4-22</span>
+          </p>
+          <p>
+            City{" "}
+            <span style={{ textAlign: "right", float: "right" }}>Multan</span>
+          </p>
+          <p>
+            Blood Group{" "}
+            <span style={{ textAlign: "right", float: "right" }}>B+</span>
+          </p>
+          <p>
+            Miarial Status{" "}
+            <span style={{ textAlign: "right", float: "right" }}>Single</span>
+          </p>
+          <p>
+            Religion{" "}
+            <span style={{ textAlign: "right", float: "right" }}>Islam</span>
+          </p>
+          <p>
+            Address{" "}
+            <span style={{ textAlign: "right", float: "right" }}>Multan</span>
+          </p>
+        </div>
+        <div className="p-2 d-flex align-items-center">
+          <Button onClick={onClose}>Cancel</Button>
         </div>
       </Drawer>
       <div className="topbar">
